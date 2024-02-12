@@ -37,4 +37,13 @@ public class SeleniumTest {
         Assert.assertTrue(menuElement.isDisplayed(), "Menu is not visible!");
         takeScreenshot(driver, "screenshot1.png");
     }
+
+    @Test
+    void teststeps1() {
+        driver.findElement(By.xpath("//*[@id='menuToggle']/input")).click();
+        WebElement menuElement = driver.findElement(By.id("menu"));
+        //Test will fail
+        Assert.assertFalse(menuElement.isDisplayed(), "Menu is not visible!");
+        takeScreenshot(driver, "screenshot1.png");
+    }
 }

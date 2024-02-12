@@ -38,12 +38,11 @@ public class WebDriverSetup {
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
 
         // Specify the destination to save the screenshot
-        File destFile = new File("src/test/resources/screenshots" + fileName);
+        File destFile = new File("src/test/resources/screenshots/" + fileName);
 
         try {
             // Copy the captured screenshot to the specified destination
             Files.copy(srcFile.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-
             System.out.println("Screenshot saved: " + destFile.getAbsolutePath());
         } catch (IOException e) {
             System.err.println("Error while saving screenshot: " + e.getMessage());
