@@ -20,7 +20,6 @@ public class SeleniumTest {
         String url = "https://anupdamoda.github.io/AceOnlineShoePortal/index.html";
         driver = WebDriverSetup.initializeDriver(url);
         takeScreenshot(driver, "screenshot.png");
-
     }
 
     @AfterTest
